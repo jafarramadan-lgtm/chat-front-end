@@ -1,9 +1,9 @@
 "use client";
-import { use, useEffect, useState } from "react";
+import { use, useEffect, useState,Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import CircularProgress from "@mui/material/CircularProgress";
 
-export default function () {
+export default function Msg() {
   const [s, ss] = useState(false);
   const [code, setCode] = useState("");
   const router = useRouter();
@@ -57,6 +57,7 @@ export default function () {
     }
   };
   return (
+    <Suspense>
     <form
       onSubmit={handleSubmit}
       className="flex rounded-3xl w-fit h-fit p-6 flex-col gap-5 justify-around items-center bg-blue-200 "
@@ -79,5 +80,6 @@ export default function () {
         {s ? <CircularProgress color="secondary" /> : "Submit"}
       </button>
     </form>
+    </Suspense>
   );
 }
