@@ -34,7 +34,7 @@ export default function Setting() {
     formData.append("file", current);
     formData.append("email", email);
     try {
-      const response = await fetch("http://127.0.0.1:8000/uploadprofile", {
+      const response = await fetch("https://chat-backend-5-gik3.onrender.com/uploadprofile", {
         method: "POST",
         body: formData,
       });
@@ -188,7 +188,7 @@ export default function Setting() {
             router.replace("/regist");
 
             try {
-              const res = await fetch("http://127.0.0.1:8000/deleteAccount", {
+              const res = await fetch("https://chat-backend-5-gik3.onrender.com/deleteAccount", {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json",

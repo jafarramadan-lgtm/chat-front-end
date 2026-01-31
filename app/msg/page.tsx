@@ -14,7 +14,7 @@ export default function () {
     const sendEmail = async () => {
       if (!email) return;
 
-      const res = await fetch("http://127.0.0.1:8000/numberget", {
+      const res = await fetch("https://chat-backend-5-gik3.onrender.com/numberget", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -31,7 +31,7 @@ export default function () {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/nuumberpost", {
+      const res = await fetch("https://chat-backend-5-gik3.onrender.com/nuumberpost", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

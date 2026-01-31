@@ -25,7 +25,7 @@ export default function LogPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const res = await fetch("http://127.0.0.1:8000/login", {
+      const res = await fetch("https://chat-backend-5-gik3.onrender.com/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

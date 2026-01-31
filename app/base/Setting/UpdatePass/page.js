@@ -162,7 +162,7 @@ export default function UpdatePass() {
             return;
           }
           try {
-            const res = await fetch("http://127.0.0.1:8000/updatePassword", {
+            const res = await fetch("https://chat-backend-5-gik3.onrender.com/updatePassword", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",

@@ -14,7 +14,6 @@ import InputAdornment from "@mui/material/InputAdornment";
 import FormControl from "@mui/material/FormControl";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
-import Cookies from "js-cookie";
 
 export default function RegisterPage() {
   const [showPassword, setShowPassword] = React.useState(false);
@@ -34,7 +33,7 @@ export default function RegisterPage() {
       return;
     } else {
       try {
-        const res = await fetch("http://127.0.0.1:8000/register", {
+        const res = await fetch("https://chat-backend-5-gik3.onrender.com/register", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

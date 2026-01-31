@@ -34,7 +34,7 @@ export default function Basepage() {
   useEffect(() => {
     const information = async () => {
       try {
-        const res = await fetch("http://127.0.0.1:8000/search", {
+        const res = await fetch("https://chat-backend-5-gik3.onrender.com/search", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -55,7 +55,7 @@ export default function Basepage() {
   useEffect(() => {
     const beginchat = async () => {
       try {
-        const res = await fetch("http://127.0.0.1:8000/chatbegin", {
+        const res = await fetch("https://chat-backend-5-gik3.onrender.com/chatbegin", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -74,7 +74,7 @@ export default function Basepage() {
 
     beginchat();
 
-    const socket = new WebSocket(`ws://127.0.0.1:8000/ws?id=${id}`);
+    const socket = new WebSocket(`ws://chat-backend-5-gik3.onrender.com/ws?id=${id}`);
     ws.current = socket;
 
     socket.onopen = () => {
